@@ -15,11 +15,11 @@ def mostrar_aprobados (c=5)
     arreglo = line.split(', ')
     nombre = arreglo[0]
     promedio = (arreglo[1].to_i + arreglo[2].to_i + arreglo[3].to_i + arreglo[4].to_i + arreglo[5].to_i)/5.0
+    #arreglo debe estar parametrizado su largo arreglo.length, no que diga 5.0
     if promedio >= c
       puts "#{nombre} está aprobado porque su promedio es igual o mayor a #{c}"
     end
   end
-
 end
 
 
@@ -47,6 +47,7 @@ while continuar
       arreglo = line.split(', ')
       nombre = arreglo[0]
       promedio = (arreglo[1].to_i + arreglo[2].to_i + arreglo[3].to_i + arreglo[4].to_i + arreglo[5].to_i)/5.0
+      #no se encuentra parametrizado ese dato(/5.0)
       escribir_promedio_alumno(nombre, promedio) #metodo para crear archivo con nota y nombre
 
       end
@@ -68,6 +69,7 @@ if opcion.to_i == 2
     end
   end
   p "El total de inasistencias es #{total_inasistencias} // Recuerda que si faltas a una prueba tienes un 0!"
+  #será considerado este mensaje!
 end
 #termina código de opción 2
 
